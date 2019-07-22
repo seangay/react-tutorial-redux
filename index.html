@@ -16,17 +16,24 @@
 <div id="app"></div>
 
 <script type="text/babel">
+  // noinspection JSUnusedGlobalSymbols
   class App extends React.Component {
+    state = {
+      name: 'Ryu',
+      age: 35
+    };
+
     render() {
       return (
         <div className="app-content">
           <h1>Hey Ninjas</h1>
-          <p>{ Math.random() * 10 }</p>
+          <p>My Name is: { this.state.name } and I am { this.state.age }</p>
         </div>
       )
     }
   }
 
+  // noinspection JSUnresolvedVariable
   ReactDOM.render(<App />, document.getElementById("app"))
 </script>
 </body>
