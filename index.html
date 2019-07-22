@@ -23,17 +23,21 @@
       age: 35
     };
 
-    handleClick(event) {
-      console.log(event.target)
-    }
+    handleClick = (event) => {
+      this.setState({
+        name: 'MONKEY',
+        age: 14
+      });
+      console.log(event.target, this.state)
+    };
 
-    handleMouseOver(event) {
+    handleMouseOver = (event) => {
       console.log(event.target, event.pageX)
-    }
+    };
 
-    handleCopy(event) {
+    handleCopy = () => {
       console.log("Try being original for once")
-    }
+    };
 
     render() {
       return (
