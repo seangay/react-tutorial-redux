@@ -23,18 +23,33 @@
       age: 35
     };
 
+    handleClick(event) {
+      console.log(event.target)
+    }
+
+    handleMouseOver(event) {
+      console.log(event.target, event.pageX)
+    }
+
+    handleCopy(event) {
+      console.log("Try being original for once")
+    }
+
     render() {
       return (
         <div className="app-content">
           <h1>Hey Ninjas</h1>
-          <p>My Name is: { this.state.name } and I am { this.state.age }</p>
+          <p>My Name is: {this.state.name} and I am {this.state.age}</p>
+          <button onClick={this.handleClick}>Click Me</button>
+          <button onMouseOver={this.handleMouseOver}>Hover Me</button>
+          <p onCopy={this.handleCopy}>What we think, we become</p>
         </div>
       )
     }
   }
 
   // noinspection JSUnresolvedVariable
-  ReactDOM.render(<App />, document.getElementById("app"))
+  ReactDOM.render(<App/>, document.getElementById("app"))
 </script>
 </body>
 </html>
