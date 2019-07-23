@@ -2,7 +2,7 @@ import React from 'react';
 
 const Ninjas = ({ninjas}) => {
   const ninjaList = ninjas.map(ninja => {
-    return ninja.age > 20 ? (
+    return (
       (
         <div className="ninja" key={ninja.id}>
           <div>Name: {ninja.name}</div>
@@ -10,7 +10,7 @@ const Ninjas = ({ninjas}) => {
           <div>Belt: {ninja.belt}</div>
         </div>
       )
-    ) : null;
+    );
   });
   
   return (
