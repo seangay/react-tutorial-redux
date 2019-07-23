@@ -31,6 +31,15 @@ export default class App extends Component {
     });
   };
   
+  
+  componentDidMount() {
+    console.log("Component mounted")
+  }
+  
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("COMPONENT UPDATED", prevProps, prevState)
+  }
+  
   render() {
     return (
       <div className="App">
