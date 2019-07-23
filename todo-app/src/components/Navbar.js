@@ -1,7 +1,8 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import {NavLink, withRouter} from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  console.log(props);
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
@@ -15,4 +16,4 @@ const Navbar = () => {
     </nav>
   );
 };
-export default Navbar;
+export default withRouter(Navbar);
