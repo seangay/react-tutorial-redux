@@ -21,7 +21,7 @@ export default class Home extends Component {
     const postList = posts.length ? (posts.map(post => {
       return (
         <div className="post card" key={post.id}>
-          <img src={Pokeball} alt="Poke-ball image"/>
+          <img src={Pokeball} alt="Poke-ball"/>
           <div className="card-content">
             <Link to={`/${post.id}`}>
               <span className="card-title red-text">{post.title}</span>
